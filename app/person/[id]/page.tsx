@@ -36,7 +36,10 @@ export default async function Person({ params }: { params: { id: string } }) {
           <p>NetWorth: {billion.netWorth}</p>
           <p>Country: {billion.country}</p>
           <p>
-            Industry: {billion.industries.map((industry: string) => industry)}
+            Industry:{" "}
+            {billion.industries.map((industry: string) => (
+              <span key={industry}>industry</span>
+            ))}
           </p>
         </div>
       </div>

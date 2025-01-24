@@ -42,7 +42,7 @@ export default async function Home() {
                   <p className={styles.slash}>/</p>
                   <ul>
                     {billion.industries.map((industry: string) => (
-                      <li> {industry}</li>
+                      <li key={industry}>{industry}</li>
                     ))}
                   </ul>
                 </div>
