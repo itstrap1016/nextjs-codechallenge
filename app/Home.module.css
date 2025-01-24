@@ -1,0 +1,49 @@
+.main {
+  padding: 50px;
+}
+.ul {
+  display: flex;
+  gap: 40px;
+  width: 1160px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.alterImg {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  transition: all 0.3s;
+}
+.li {
+  width: 200px;
+}
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.link:hover .img {
+  scale: 1.1;
+}
+.link:hover .alterImg {
+  scale: 1.1;
+}
+.img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+.name {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 42px;
+}
+.info {
+  display: flex;
+  font-size: 14px;
+}
+.slash {
+  margin: 0 5px;
+}
