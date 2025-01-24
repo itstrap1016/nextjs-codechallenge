@@ -16,7 +16,8 @@ async function getBillion(id: string) {
 }
 
 export default async function Person({ params }: { params: { id: string } }) {
-  const billion = await getBillion(params.id);
+  const { id } = await params;
+  const billion = await getBillion(id);
 
   return (
     <main className={styles.main}>
