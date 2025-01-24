@@ -1,6 +1,12 @@
 import axios from "axios";
 import styles from "./Person.module.css";
 
+interface Asset {
+  ticker: string;
+  numberOfShares: number;
+  exerciseOptionPrice: number;
+}
+
 async function getBillion(id: string) {
   const response = await axios.get(
     `https://billions-api.nomadcoders.workers.dev/person/${id}`
@@ -37,7 +43,7 @@ export default async function Person({ params }: { params: { id: string } }) {
       <p className={styles.bio}>{billion.bio.map((text: string) => text)}</p>
       <ul className={styles.ul}>
         {billion.financialAssets
-          ? billion.financialAssets.map((asset: any, index: number) => (
+          ? billion.financialAssets.map((asset: Asset, index: number) => (
               <li key={index}>
                 {asset.ticker ? <p>Tickers: {asset.ticker}</p> : null}
                 {asset.numberOfShares ? (
